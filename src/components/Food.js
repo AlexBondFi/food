@@ -1,26 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from './UI/Card';
-import classes from './Food.module.css';
 
 const Food = () => {
+
   const [data, setData] = useState([]);
   const [searchInput, setSearchInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
-    axios
-      .get('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0')
+    axios.get('http://localhost:4001/dishes/')
       .then((res) => {
-        const fetches = res.data.results.map((p) => {
-          return axios.get(p.url).then((res) => res.data);
-        });
-        Promise.all(fetches).then((res) => {
-          setData(res);
-          setIsLoading(false);
-        });
-      });
+        setData(res.data);
+        setIsLoading(false);
+      })
+      .catch((err) => console.log("Something wrong with the database ", err));
   }, []);
 
   const searchInputHandler = (e) => {
@@ -38,12 +33,12 @@ const Food = () => {
   return (
     <>
       <input onChange={searchInputHandler} />
-      <div className={classes.cards}>
-        {searchFilter.map((card) => (
+      <div>
+        {searchFilter.map((item) => (
           <Card
-            key={card.name}
-            name={card.name}
-            image={card.sprites.other['official-artwork'].front_default}
+            key={item.id}
+            name={item.name}
+            image={item.image}
           />
         ))}
       </div>

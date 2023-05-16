@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className={classes.home}>
       <Link to="/food"><img src="#" alt="ALL RCIPES" /></Link>
-      <Link to="/dish"><img src="#" alt="SINGLE DISH" /></Link>
+      <Link to="/form"><img src="#" alt="ADD DISH" /></Link>
     </div>
   );
 };

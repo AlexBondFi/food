@@ -13,6 +13,9 @@ const Nav = () => {
         <li>
           <NavLink to="/food">Food</NavLink>
         </li>
+        <li>
+          <NavLink to="/form">Add recipe</NavLink>
+        </li>
       </ul>
     </nav>
   );

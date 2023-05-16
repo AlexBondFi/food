@@ -11,8 +11,9 @@ const Dish = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${params.dish}`)
+      .get('http://localhost:4001/dishes/' + params.id)
       .then((res) => {
+        console.log(res)
         setData(res.data);
         setIsLoading(false);
       });
@@ -26,7 +27,7 @@ const Dish = () => {
     <div>
       <h2>{data.name}</h2>
       <img
-        src={data.sprites?.other.dream_world.front_default}
+        src={data.image}
         alt={data.name}
       />
       <button onClick={() => navigate(-1)}>Go back </button>

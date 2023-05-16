@@ -1,18 +1,19 @@
 .nav ul li {
   display: inline-block;
 }
+
 .nav ul li a {
   color: white;
   padding: 1rem;
   text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.4s;
 }
+
 .nav ul li a.active {
-  color: orange;
+  color: red;
   text-decoration: underline;
 }
+
 .nav ul li a:hover {
-  color: orange;
+  color: red;
   text-decoration: underline;
 }
