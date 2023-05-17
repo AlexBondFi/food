@@ -1,0 +1,12 @@
+.dish {
+    display: flex;
+}
+
+.dish img {
+    width: 200px;
+}
+
+.dish button {
+    width: 70px;
+
+}

@@ -1,11 +1,55 @@
 {
   "dishes": [
     {
-      "name": "55",
-      "author": "555",
-      "country": "5555",
-      "image": "555555",
+      "name": "Another Dish",
+      "author": "Second author",
+      "country": "Other country",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/blooming-quesadilla-ring-1674080631.jpeg",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "Ingredient 1",
+          "amount": "100 grams"
+        },
+        {
+          "id": 2,
+          "ingredient": "Ingredient 2",
+          "amount": "200 grams"
+        }
+      ],
+      "instructions": "BURN!!!",
       "id": 1
+    },
+    {
+      "name": "Test name",
+      "author": "Test author",
+      "description": "TEst description",
+      "country": "Russian Federation",
+      "image": "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTXqx7DM0cHF7JZwm6Ux7jaxz12Zv_cGJH4mbkX76f4MUkbsTvEg_adU1IfZweRtVmh6m5K2ujmKB3q3i0dupo",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "111",
+          "amount": "111"
+        },
+        {
+          "id": 2,
+          "ingredient": "222",
+          "amount": "222"
+        },
+        {
+          "id": 3,
+          "ingredient": "333",
+          "amount": "333"
+        },
+        {
+          "id": 4,
+          "ingredient": "44",
+          "amount": "444"
+        }
+      ],
+      "instructions": "boil 100 hours",
+      "id": 2
     }
   ]
 }

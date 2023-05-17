@@ -6,8 +6,9 @@
   cursor: pointer;
   height: auto;
   text-align: center;
-  padding: 1rem;
+  padding: 1em;
 }
+
 .card img {
   width: 50px;
 }

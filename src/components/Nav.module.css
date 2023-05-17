@@ -10,10 +10,10 @@
 
 .nav ul li a.active {
   color: red;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .nav ul li a:hover {
   color: red;
-  text-decoration: underline;
+  text-decoration: none;
 }

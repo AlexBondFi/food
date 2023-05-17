@@ -23,7 +23,7 @@ const Food = () => {
   }
 
   const searchFilter = data.filter(item => {
-    return item.name.includes(searchInput)
+    return item.name.toLowerCase().includes(searchInput)
   })
 
   if (isLoading) {
@@ -38,6 +38,7 @@ const Food = () => {
           <Card
             key={item.id}
             name={item.name}
+            id={item.id}
             image={item.image}
           />
         ))}
