@@ -1,7 +1,7 @@
 .home {
     display: flex;
     justify-content: space-around;
-    margin: 2rem 15rem;
+    margin: 30px 240px;
 }
 
 .home img {

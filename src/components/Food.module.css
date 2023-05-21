@@ -1,18 +1,18 @@
 .cardarea {
   display: grid;
   grid-template-columns: repeat(3, 3fr);
-  gap: 2rem;
+  gap: 30px;
 }
 
 .food input {
   border-radius: 5px;
   border: 1px solid darkgrey;
   box-shadow: none;
-  padding: 1rem;
-  margin: 2rem;
+  padding: 16px;
+  margin: 30px;
   font-family: inherit;
   text-align: center;
-  width: 10rem;
+  width: 160px;
 }
 
 .food {
