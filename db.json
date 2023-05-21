@@ -9,12 +9,12 @@
         {
           "id": 1,
           "ingredient": "Ingredient 1",
-          "amount": "100 grams"
+          "amount": "100 gramms"
         },
         {
           "id": 2,
           "ingredient": "Ingredient 2",
-          "amount": "200 grams"
+          "amount": "200 gramms"
         }
       ],
       "instructions": "BURN!!!",
@@ -50,6 +50,64 @@
       ],
       "instructions": "boil 100 hours",
       "id": 2
+    },
+    {
+      "name": "Tasty food",
+      "author": "Happy cook",
+      "description": "Relax and drink the vine",
+      "country": "Latvia",
+      "image": "https://bolneywineestate.com/wp-content/uploads/2020/10/Cheese-and-Wine-Tour_Square.jpg",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "vine",
+          "amount": "200 lt"
+        },
+        {
+          "id": 2,
+          "ingredient": "cheese",
+          "amount": "2000 gr"
+        }
+      ],
+      "instructions": "EAT, DRINK, RELAX!!!",
+      "id": 3
+    },
+    {
+      "name": "Also something to eat",
+      "author": "Somebody",
+      "description": "Looks like food",
+      "country": "Falkland Islands (Malvinas)",
+      "image": "https://thecozycook.com/wp-content/uploads/2022/08/Chicken-Potato-Soup-f.jpg",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "Something you really like",
+          "amount": "500 gramms"
+        }
+      ],
+      "instructions": "Eat it while nobody see you",
+      "id": 4
+    },
+    {
+      "name": "qwerty",
+      "author": "123455678",
+      "description": "cgrtgrgrrfrf",
+      "country": "Canada",
+      "image": "https://cdn.britannica.com/36/123536-050-95CB0C6E/Variety-fruits-vegetables.jpg",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "rgvtgvhbrtb",
+          "amount": "100 gramm"
+        },
+        {
+          "id": 2,
+          "ingredient": "5tg",
+          "amount": "123 gr"
+        }
+      ],
+      "instructions": "5yhb",
+      "id": 5
     }
   ]
 }

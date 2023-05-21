@@ -1,14 +1,22 @@
-.cards {
+.cardarea {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 2rem;
 }
 
-input {
+.food input {
   border-radius: 5px;
-  border: 1px solid #9a9a9a;
+  border: 1px solid darkgrey;
   box-shadow: none;
   padding: 1rem;
-  margin: 2rem auto;
+  margin: 2rem;
   font-family: inherit;
+  text-align: center;
+  width: 10rem;
+}
+
+.food {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

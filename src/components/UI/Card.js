@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import classes from './Card.module.css';
 
-const Card = ({ image, name, id }) => {
+const Card = ({ image, name, id, flag }) => {
   return (
     <div className={classes.card}>
       <img src={image} alt={name} />

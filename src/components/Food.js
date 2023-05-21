@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from './UI/Card';
+import classes from './Food.module.css';
 
 const Food = () => {
 
@@ -31,9 +32,9 @@ const Food = () => {
   }
 
   return (
-    <>
-      <input onChange={searchInputHandler} />
-      <div>
+    <div className={classes.food}>
+      <input placeholder='RECIPE SEARCH' onChange={searchInputHandler} />
+      <div className={classes.cardarea}>
         {searchFilter.map((item) => (
           <Card
             key={item.id}
@@ -43,7 +44,7 @@ const Food = () => {
           />
         ))}
       </div>
-    </>
+    </div>
 
   );
 };

@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+select {
+    height: 36px;
+}
+
+.divForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.divOption {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.divIngredient {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.divIngredient .divForm {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.divIngredient .divForm:last-child {
+    margin-right: 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+}
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+}

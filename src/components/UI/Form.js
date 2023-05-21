@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import classes from './Form.module.css';
 
 const Form = () => {
     const [data, setData] = useState({
@@ -20,7 +21,7 @@ const Form = () => {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
-        axios.get("https://restcountries.com/v2/all").then((res) => {
+        axios.get("https://restcountries.com/v2/all?fields=name,flags").then((res) => {
             setCountries(res.data);
         });
     }, []);
@@ -51,17 +52,18 @@ const Form = () => {
 
     return (
         <div>
-            <form onSubmit={submitHandler}>
+            <h2>Add your new recipe here:</h2>
+            <form className={classes.form} onSubmit={submitHandler}>
                 {submited && <div>Success! Recipe added</div>}
-                <div>
+                <div className={classes.divForm}>
                     <label htmlFor="name">Name:</label>
                     <input onChange={inputHandler} type="text" name='name' id='name' />
                 </div>
-                <div>
+                <div className={classes.divForm}>
                     <label htmlFor="author">Author:</label>
                     <input onChange={inputHandler} type="text" name='author' id='author' />
                 </div>
-                <div>
+                <div className={classes.divForm}>
                     <label htmlFor="description">Description:</label>
                     <textarea
                         type="text"
@@ -70,7 +72,7 @@ const Form = () => {
                         onChange={inputHandler}
                     />
                 </div>
-                <div className="formsection">
+                <div className={classes.divOption}>
                     <label htmlFor="country">Recipe is from:</label>
                     <select name="country" id="country" onChange={inputHandler}>
                         {countries.map((country) => (
@@ -78,18 +80,18 @@ const Form = () => {
                         ))}
                     </select>
                 </div>
-                <div>
+                <div className={classes.divForm}>
                     <label htmlFor="image">Image URL:</label>
                     <input onChange={inputHandler} type="url" name='image' id='image' />
                 </div>
                 {ingredients.map((_, i) => {
                     return (
-                        <div key={i}>
-                            <div>
+                        <div className={classes.divIngredient} key={i}>
+                            <div className={classes.divForm}>
                                 <label htmlFor="amount">Quantity</label>
                                 <input type="text" name="amount" id="amount" onChange={(e) => ingredientsHandler(e, i)} />
                             </div>
-                            <div>
+                            <div className={classes.divForm}>
                                 <label htmlFor="ingredient">Ingredient</label>
                                 <input type="text" name="ingredient" id="ingredient" onChange={(e) => ingredientsHandler(e, i)} />
                             </div>
@@ -97,11 +99,11 @@ const Form = () => {
                     );
                 })}
                 <button onClick={ingredientAddFieldHandler}>Add more ingredients</button>
-                <div>
+                <div className={classes.divForm}>
                     <label htmlFor="instructions">Instructions</label>
                     <textarea type="text" name="instructions" id="instructions" onChange={inputHandler} />
                 </div>
-                <button type='submit'>BTN</button>
+                <button type='submit'>ADD RECIPE</button>
             </form>
         </div>
     );

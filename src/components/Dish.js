@@ -11,14 +11,11 @@ const Dish = () => {
   const [flag, setFlag] = useState(
     "https://yt3.googleusercontent.com/k9rvajLn47sRKLAHsiaArgByTZVqQa_qVUUDjvxUjEA4L2N-SQ6yE8DdXk4LDz-VjMPVCDL9IpY=s900-c-k-c0x00ffffff-no-rj"
   );
-
-  console.log(params);
   useEffect(() => {
     setIsLoading(true);
     axios
       .get('http://localhost:4001/dishes/' + params.id)
       .then((res) => {
-        console.log(res)
         setData(res.data);
         setIsLoading(false);
         axios.get("https://restcountries.com/v3.1/name/" + res.data.country).then(
@@ -36,17 +33,16 @@ const Dish = () => {
   return (
     <div className={classes.dish}>
       <div className={classes.leftside}>
-        <img src={data.image} alt={data.name} />
-        <img src={flag} className="flag" />
-        <h4>IngrEdients</h4>
+        <img src={data.image} alt={data.name} className={classes.image} />
+        <img src={flag} className={classes.flag} />
+        <h4>Ingredients</h4>
         <table className={classes.table}>
           <tbody>
-            {isLoading && data.ingredients.map((ingredient) => {
-              console.log(ingredient)
+            {data.ingredients && data.ingredients.map((ingredient) => {
               return (
                 <tr key={ingredient.id}>
-                  <td className={classes.tablerow}>
-                    {ingredient.amount} - {ingredient.ingredient}
+                  <td >
+                    {ingredient.ingredient} - {ingredient.amount}
                   </td>
                 </tr>
               );
@@ -58,7 +54,7 @@ const Dish = () => {
         <h2>{data.name}</h2>
         <p>By: {data.author}</p>
         <h4>Instructions</h4>
-        <p>{data.instrctions}</p>
+        <p>{data.instructions}</p>
         <button onClick={() => navigate(-1)}>Go back </button>
       </div>
     </div >
